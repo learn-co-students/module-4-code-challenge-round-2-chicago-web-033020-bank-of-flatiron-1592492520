@@ -16,7 +16,8 @@ class AddTransactionForm extends Component {
               step="0.01"
             />
           </div>
-          <button className="ui button" type="submit">
+          <button className="ui button" type="submit" onChange={()=>this.handleChange()}>
+            {/* I need to push the event up to app.js and change the state */}
             Add Transaction
           </button>
         </form>
