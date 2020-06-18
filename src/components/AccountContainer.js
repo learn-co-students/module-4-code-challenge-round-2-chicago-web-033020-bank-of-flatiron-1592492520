@@ -7,9 +7,9 @@ class AccountContainer extends Component {
   render() {
     return (
       <div>
-        <Search />
-        <AddTransactionForm />
-        <TransactionsList />
+        <Search handleFilter={this.props.handleFilter}/>
+        <AddTransactionForm handleSubmit={this.props.handleSubmit}/>
+        <TransactionsList transactions={this.props.transactions} handleDelete={this.props.handleDelete}/>
       </div>
     );
   }
